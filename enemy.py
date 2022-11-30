@@ -2,7 +2,7 @@ import turtle
 import pygame
 import random
 import math
-from main_player import Player
+from player import Player
 
 class Enemy():
   def __init__(self, sprite, color, target):
@@ -15,14 +15,16 @@ class Enemy():
     self.hp = 1
 
   def facePlayer():
-    
+    tarX = self.target.xcor()
+    tarY = self.target.ycor()
+    dir = atan(
 
 
 
 
 
   
-  def facePlayer():
+  def testFacePlayer():
     if self.turt.xcor() > target.xcor() and self.turt.ycor() > target.ycor():
       self.turt.setheading(135)
     if self.turt.xcor() > target.xcor() and self.turt.ycor() < target.ycor():
