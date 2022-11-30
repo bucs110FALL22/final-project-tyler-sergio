@@ -1,6 +1,7 @@
 import turtle
 import math
 import os
+import pygame
 
 window = turtle.Screen() 
 window.bgcolor('gray20')
