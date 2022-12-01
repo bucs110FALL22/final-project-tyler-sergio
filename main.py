@@ -1,14 +1,11 @@
 import pygame
-from player import Player
-from player import Sprite
-from player import Game
-from enemy import Enemy
+from src.game import Game
 #import your controller
 
 def main():
     pygame.init()
     game = Game()
-    game.play()
+    game.run()
     #Create an instance on your controller object
     #Call your mainloop
     
