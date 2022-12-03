@@ -1,48 +1,45 @@
-import turtle
 import pygame
 import random
-import math
-from src.player import Squid
 
 class Enemy():
-  def __init__(self, screen, size, speed, x, y, direction):
+  def __init__(self, screen):
     self.screen = screen
-    self.enemSpeed = speed
-    self.maxEnemies = 10
     self.image = []
+    self.size = []
     self.speed = []
-    self.direction = []
     self.x = []
     self.y = []
-    self.imageRect = []
+    self.xChange = []
+    self.yChange = []
     
-
   def move(self, index):
-    print(index)
-    self.x[index] += self.speed[index]
-    self.y[index] += self.speed[index]
-    
-    #self.newX = cos(self.direction) * self.speed
-    #self.newY = sin(self.direction) * self.speed
-    #self.x = self.x + self.newX
-    #self.y = self.y + self.newY
+    self.x[index] += self.xChange[index]
+    self.y[index] += self.yChange[index]
 
-  def spawnEnemies(self):
-    for i in range(0, self.maxEnemies):
-      self.image.append(pygame.transform.scale(pygame.image.load("assets/picture/enemy.png").convert(),
-        (size, size)))
-      self.speed.append(self.enemSpeed)
-      self.direction.append(math.radians(direction))
+  def spawnEnemy(self, size, speed, x, y):
+      self.size.append(size)
+      self.image.append(pygame.transform.scale(pygame.image.load("assets/picture/enemy.png").convert_alpha(), (size, size)))
+      self.speed.append(speed)
       self.x.append(x)
       self.y.append(y)
-      self.imageRect.append(self.image.get_rect(topleft = (self.x, self.y)))
-
+      self.xChange.append(speed*(random.randrange(5, 15)/10))
+      self.yChange.append(speed*(random.randrange(5, 15)/10))
   
-  def drawEnemy(self, i):
-    for i in range(0, self.maxEnemies):
-      self.move(i)
-      
-      self.screen.blit(self.image[i], (self.x[i], self.y[i]))
-      self.imageRect = self.image.get_rect(topleft = (self.x, self.y))
+  
+  def drawEnemy(self, index):
+    try:
+      self.screen.blit(self.image[index], (self.x[index], self.y[index]))
+    except:
+      print('fail')
+
+  def enemyReset(self):
+    self.image = []
+    self.size = []
+    self.speed = []
+    self.x = []
+    self.y = []
+    self.xChange = []
+    self.yChange = []
+  
     
     

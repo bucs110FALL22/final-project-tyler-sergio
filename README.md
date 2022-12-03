@@ -1,75 +1,110 @@
 :warning: Everything between << >> needs to be replaced (remove << >> after replacing)
 # CS110 Project Proposal
-# << Project Title >>
+# Alien Running
 ## CS 110 Final Project
-### Semester 1, 2022
+### Fall Semester, 2022
 ### [Assignment Description](https://docs.google.com/document/d/1H4R6yLL7som1lglyXWZ04RvTp_RvRFCCBn6sqv-82ps/edit?usp=sharing)
 
-<< [repl](#) >>
 
-<< [link to demo presentation slides](#) >>
+https://replit.com/join/ztakfmmctz-tylermoy
 
-### Team: Tyler & Sergio
+(https://docs.google.com/presentation/d/1ANzWox7AkampWhrQUmIXnRSgKLYriFsnhs9rqwUT-PA/edit?usp=sharing)
+
+### Team: Tyler & Sergio  - (S&T Studios)
 #### Tyler Moy & Sergio Soria
 
 ***
 
 ## Project Description
 
-<< Give an overview of your project >>
+The game has a surviving and a focus mechanic, where the user needs to avoid enemies in the space field with the support of arrow keys. Considering the maximum punctuation that you may got shown in the Score. And having the possibility to try improving your record anytime.   
 
 ***    
 
 ## User Interface Design
 
 - **Initial Concept**
-  - << A wireframe or drawing of the user interface concept along with a short description of the interface. You should have one for each screen in your program. For example, if your program has a start screen, game screen, and game over screen, you should include a wireframe / screenshot / drawing of each one and a short description of the components. >>
+  - Concept Art: [Concept Art:](assets/OutputScreen.jpg)
     
+  - Game screen: The first interaction of the game starts ahead with a soft and basic control to go little by little to understand the game.
+
+  - Game Over Screen: Once enemiesreched to touch the player, there will appear a decision to the user, either be to restart the game to play again or exit. 
+      
     
 - **Final GUI**
-  - << You should also have a screenshot of each screen for your final GUI >>
+  - Game Screen: [Game Screen:](assets/Screenshot_game.png)
+  - Game Over Screen:  [Game Over Screen:](assets/Screenshot_gameover.png)
+
 
 ***        
 
 ## Program Design
 
 * Non-Standard libraries
-    * << You should have a list of any additional libraries or modules used (pygame, request) beyond non-standard python. 
-         For each additional module you should include
-         - url for the module documentation
-         - a short description of the module >>
+    * Pygame: A module to set functions to develop games into Python.
+      
+    * Random: A module to prepare random numbers for different distributions. 
+
+
+
 * Class Interface Design
-    * << A simple drawing that shows the class relationships in your code (see below for an example). This does not need to be overly detailed, but should show how your code fits into the Model/View/Controller paradigm. >>
-        * ![class diagram](assets/class_diagram.jpg) 
+     
+    * ![class diagram](assets/class_diagram.jpg)
+    * ![Classes:](assets/classes.png)
+    * ![Classes:](assets/SecondClasses.png)
+      
+
+
+
 * Classes
-    * << You should have a list of each of your classes with a description. >>
+    * Class Squid: A class that execute the way of motion, appareance, size of the player through a picture of a  squid, and being controlled by the arrows keys, having account the boundaries of the output.  
+      
+    * Class Enemy: This class is responsible for most functions related to the spawning of enemies and management of enemy data.
+      
+    * Class Text: A class that present and personifies the characteristics of the displays of text in the Output. It makes the displaying of text easier to do (kind of).
+      
+    * Class Controller: A class that set and apply the functions to the user and all elements in the program, even the settings to restart or exit the game. 
+
+
 
 ## Project Structure and File List
 
 The Project is broken down into the following file structure:
 
+
 * main.py
 * src
-    * << all of your python files should go here >>
+    * << all of your python files should go here >> 
 * assets
     * << all of your media, i.e. images, font files, etc, should go here) >>
-* etc
-    * << This is a catch all folder for things that are not part of your project, but you want to keep with your project >>
+
 
 ***
 
+
+
 ## Tasks and Responsibilities 
 
-   * Outline the team member roles and who was responsible for each class/method, both individual and collaborative.
+   * Sergio Soria was responsible to the ellaboration of the Squid Class, and the space environment and the main controls of the player. 
+
+   * Tyler Moy was responsible to the Enemies and Text Class and organize their functions to the Control Class. 
+
 
 ## Testing
 
-* << Describe your testing strategy for your project. >>
+* We used to check the program during each time that we analyze all classes. Besides, we always run the program to verify since the beginning to the final that every code is succesfully organized and placed.
+* To iron out all of the bugs, we ran the program periodically to see if things were working correctly. When errors came up, we would look at what line the error occured at and then figure out why it happened and how to fix it.
+
+
+
 
 ## ATP
 
-| Step                 |Procedure             |Expected Results                   |
-|----------------------|:--------------------:|----------------------------------:|
-|  1                   | Run Counter Program  |GUI window appears with count = 0  |
-|  2                   | click count button   | display changes to count = 1      |
-etc...
+| Step |Procedure                           |Expected Results                                                                    |
+|------|:----------------------------------:|-----------------------------------------------------------------------------------:|
+|  1   | Start program along with the window | GUI Program appears without problem.                                              |
+|  2   | Run and check controllers           | Player starts to move around the background exported.                             |
+|  3   | Enemies appears                     | Amount of enemies increases to have difficulty in the gameplay.                   |
+|  4   | Score acts raising numbers          | Balanced reaction at time to avoid enemies.                                       |
+|  5   | Game Over text appears              | Game stop when player is in contact with an enemy and respective score is visible.|
+
