@@ -24,4 +24,9 @@ Using the example below, list each model class and its interface
    * def __init__(self, motion, color):
    *  From this moment, I am planning to add objects as secondary field or even being part of the scenario.
    *  def timer(): And for final, I want to add a timer to set how many enemies you can beat in a range of time.
+
+
+
+
+
    

@@ -107,3 +107,6 @@ The Project is broken down into the following file structure:
 |  3   | Enemies appears                     | Amount of enemies increases to have difficulty in the gameplay.                   |
 |  4   | Score acts raising numbers          | Balanced reaction at time to avoid enemies.                                       |
 |  5   | Game Over text appears              | Game stop when player is in contact with an enemy and respective score is visible.|
+
+
+

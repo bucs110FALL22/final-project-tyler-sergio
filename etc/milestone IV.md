@@ -26,3 +26,7 @@ Answer the following questions about your controller class
 5. Are you calling pygame.flip() or pygame.update() at the end of your mainloop
    Yes we are finish pygame.flip() and pygame.update() to the running of the codes in the 
    loops and avoid complications.
+
+
+
+

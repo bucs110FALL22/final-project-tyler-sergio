@@ -1,7 +1,7 @@
 import pygame
 from pygame.locals import *
-
-
+#
+#
 class Squid:
     def __init__(self, parent_screen, length, speed, startx, starty):
         self.length = length
